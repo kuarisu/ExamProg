@@ -50,7 +50,6 @@ public class Player_Bonce : MonoBehaviour
         StopAllCoroutines();
         m_isMoveable = true;
         Vector3 _colNormale = m_colAvatar.contacts[0].normal;
-        Vector3 _previousDirection = m_direction;
         m_direction = Vector3.Reflect(m_colAvatar.contacts[0].point - m_previousPos,_colNormale).normalized;
 
         Quaternion rotation = Quaternion.LookRotation(m_direction);

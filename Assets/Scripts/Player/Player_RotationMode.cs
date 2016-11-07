@@ -18,8 +18,6 @@ public class Player_RotationMode : MonoBehaviour {
 
 	void Update ()
     {
-        Debug.Log(m_canRotate);
-
         if (m_PlayerBonce.m_isMoveable == true && Input.GetKeyDown(KeyCode.Mouse0) && m_PlayerBonce.m_canStopAgain == true)
         {
             m_canRotate = true;
@@ -39,11 +37,8 @@ public class Player_RotationMode : MonoBehaviour {
 
     IEnumerator Rotation()
     {
-        Debug.Log("ds<fhksdfhjskdf");
-
         while (m_canRotate == true)
         {
-            Debug.Log("hello");
             transform.Rotate(m_speed * Time.deltaTime, 0,0);
             yield return new WaitForEndOfFrame();
         }

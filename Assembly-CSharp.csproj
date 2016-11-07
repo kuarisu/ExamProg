@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4C867EC3-D719-D344-C986-F71231EDFF38}</ProjectGuid>
+    <ProjectGuid>{91AF8AE0-40F6-9F69-88AA-11BC4600BFEF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,13 +45,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Balle.cs" />
-     <Compile Include="Assets\Scripts\Deplacement01.cs" />
-     <Compile Include="Assets\Scripts\GestionAnime.cs" />
-     <Compile Include="Assets\Scripts\MouvementSimple.cs" />
-     <Compile Include="Assets\Scripts\Tourelle.cs" />
-     <Compile Include="Assets\Scripts\TriggerMessage.cs" />
-     <Compile Include="Assets\Scripts\Triggerteleport.cs" />
+     <Compile Include="Assets\Bullet_Move.cs" />
+     <Compile Include="Assets\Scripts\Camera_SmoothFollow.cs" />
+     <Compile Include="Assets\Scripts\Manager_GameManager.cs" />
+     <Compile Include="Assets\Scripts\Player\Player_Bonce.cs" />
+     <Compile Include="Assets\Scripts\Player\Player_RotationMode.cs" />
+     <Compile Include="Assets\Scripts\Trigger_CheckPoint.cs" />
+     <Compile Include="Assets\Scripts\old\Balle.cs" />
+     <Compile Include="Assets\Scripts\old\Deplacement01.cs" />
+     <Compile Include="Assets\Scripts\old\GestionAnime.cs" />
+     <Compile Include="Assets\Scripts\old\MouvementSimple.cs" />
+     <Compile Include="Assets\Scripts\old\Tourelle.cs" />
+     <Compile Include="Assets\Scripts\old\TriggerMessage.cs" />
+     <Compile Include="Assets\Scripts\old\Triggerteleport.cs" />
+     <Compile Include="Assets\Turret_Move.cs" />
+     <Compile Include="Assets\Turret_Shoot.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
