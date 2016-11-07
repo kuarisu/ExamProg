@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Balle.cs">
+    <Files>
+      <File FileName="Assets\Scripts\MouvementSimple.cs" Line="182" Column="3" />
+      <File FileName="Assets\Scripts\Balle.cs" Line="46" Column="58" />
+      <File FileName="Assets\Scripts\Tourelle.cs" Line="66" Column="64" />
+      <File FileName="Assets\Scripts\TriggerMessage.cs" Line="51" Column="8" />
+      <File FileName="Assets\Scripts\Triggerteleport.cs" Line="27" Column="71" />
+      <File FileName="Assets\Scripts\GestionAnime.cs" Line="28" Column="33" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
