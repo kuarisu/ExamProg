@@ -12,8 +12,6 @@ public class Player_RotationMode : MonoBehaviour {
     {
         m_PlayerBonce = GetComponent<Player_Bonce>();
         m_canRotate = false;
-
-
     }
 
 	void Update ()
@@ -30,7 +28,6 @@ public class Player_RotationMode : MonoBehaviour {
         {
             m_canRotate = false;
             m_PlayerBonce.PushedByPlayer();
-            StopCoroutine("Rotation");
         }
 
     }

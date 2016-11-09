@@ -6,7 +6,7 @@ public class Bullet_Move : MonoBehaviour {
     [HideInInspector]
     public float vitesse;
 
-    public float timerDestruct = 30;
+    public float timerDestruct = 15;
 
     void Update()
     {

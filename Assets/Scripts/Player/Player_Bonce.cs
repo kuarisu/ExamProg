@@ -19,12 +19,13 @@ public class Player_Bonce : MonoBehaviour
     public GameObject m_targetforAvatar;
 
     [HideInInspector]
-    public bool m_canStopAgain;
+    public bool m_canStopAgain = true;
 
 
 
     void Start()
     {
+        m_canStopAgain = true;
         m_isMoveable = false;
         m_Rb = GetComponent<Rigidbody>();
         m_previousPos = transform.position;
@@ -89,6 +90,10 @@ public class Player_Bonce : MonoBehaviour
                 m_colAvatar = col;
                 PushedByPlateform();
             }
+        }
+        if (col.gameObject.tag == "Bullet")
+        {
+            GetComponent<Player_LifePoint>().LostPoint();
         }
     }
 }

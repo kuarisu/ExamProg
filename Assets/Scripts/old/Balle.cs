@@ -4,7 +4,7 @@ using System.Collections;
 public class Balle : MonoBehaviour { 
 
 	//Cette variable sert a modifier la vitesse de deplacement de la balle
-	public float vitesse; 
+	public float m_speed; 
 
 	//cette variable permet de definir le temps de vie de la balle
 	public float timerDestruct = 30;
@@ -29,7 +29,7 @@ public class Balle : MonoBehaviour {
 		//la vitesse est modifiée par le variable vitesse
 		//on multiplie par Time.deltaTime * 50 pour rendre ce deplacement independant du framerate
 		//On ajoute Space.World pour eviter que la rotation de la balle n'afecte sa trajectoire
-		transform.Translate (transform.forward * vitesse * Time.deltaTime * 50,Space.World);	
+		transform.Translate (transform.forward * m_speed * Time.deltaTime * 50,Space.World);	
 	}
 
 	//Cette fonction est appelée automatiquement par unity lors d'une collision avec un autre collider

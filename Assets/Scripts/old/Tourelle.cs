@@ -53,7 +53,7 @@ public class Tourelle : MonoBehaviour {
 				//une foi la balle instanciée, on l'oriente dans la meme direction que la tourelle
 				_clone.transform.LookAt (transform.position + transform.forward);
 				//puis, on accéde a sa variable de vitesse et on la modifie
-				_clone.GetComponent<Balle>().vitesse = m_speedBullet;
+				_clone.GetComponent<Balle>().m_speed = m_speedBullet;
 			}
 		}
 	}
