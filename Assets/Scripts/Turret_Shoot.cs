@@ -22,13 +22,18 @@ public class Turret_Shoot : MonoBehaviour
 
     void Start()
     {
-        m_targetAvatar = Manager_GameManager.Instance.m_Avatar;
+        Invoke("Delay", 0.1f);
     }
 
 
+    void Delay()
+    {
+        m_targetAvatar = Manager_GameManager.Instance.m_Avatar;
+    }
+
     void Update()
     {
-        if (m_targetingAvatar == true)
+        if (m_targetingAvatar == true && m_targetAvatar != null)
         {
             if (Vector3.Distance(transform.position, m_targetAvatar.transform.position) < m_distance && !m_isCoroutineStarted)
             {
@@ -66,7 +71,7 @@ public class Turret_Shoot : MonoBehaviour
                     GameObject _clone;
                     _clone = Instantiate(m_prefabBullet, this.transform.position, Quaternion.identity) as GameObject;
                     _clone.transform.LookAt(transform.position + transform.forward);
-                    _clone.GetComponent<Balle>().m_speed = m_speedBullet / 10;
+                    _clone.GetComponent<Bullet_moving>().m_speed = m_speedBullet / 10;
                 }
 
             yield return new WaitForEndOfFrame();

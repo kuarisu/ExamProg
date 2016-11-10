@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Balle : MonoBehaviour { 
+public class Bullet_moving : MonoBehaviour { 
 
 	//Cette variable sert a modifier la vitesse de deplacement de la balle
 	public float m_speed; 

@@ -11,6 +11,11 @@ public class Manager_GameManager : MonoBehaviour {
     [HideInInspector]
     public GameObject m_Avatar;
 
+    public Vector3 m_lastCheckpoint;
+   
+    [HideInInspector]
+    public bool m_playerPaused;
+
     private void Awake()
     {
         m_Avatar = m_Player;
@@ -23,5 +28,6 @@ public class Manager_GameManager : MonoBehaviour {
 
         Manager_GameManager.Instance = this;
         DontDestroyOnLoad(this.gameObject);
+        m_playerPaused = false;
     }
 }

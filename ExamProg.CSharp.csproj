@@ -65,7 +65,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Bullet_Move.cs" />
+    <Compile Include="Assets\Scripts\Bullet_moving.cs" />
     <Compile Include="Assets\Scripts\Camera_SmoothFollow.cs" />
     <Compile Include="Assets\Scripts\Manager_GameManager.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Bonce.cs" />
@@ -73,8 +73,9 @@
     <Compile Include="Assets\Scripts\Player\Player_LifePoint.cs" />
     <Compile Include="Assets\Scripts\Player\Player_NbBullet.cs" />
     <Compile Include="Assets\Scripts\Player\Player_RotationMode.cs" />
-    <Compile Include="Assets\Scripts\Player\Player_Shoot.cs" />
+    <Compile Include="Assets\Scripts\Player_Shoot.cs" />
     <Compile Include="Assets\Scripts\Trigger_CheckPoint.cs" />
+    <Compile Include="Assets\Scripts\Turret_Destroy.cs" />
     <Compile Include="Assets\Scripts\Turret_Move.cs" />
     <Compile Include="Assets\Scripts\Turret_Shoot.cs" />
     <Compile Include="Assets\Scripts\UI_Follow.cs" />

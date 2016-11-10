@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Player_Bonce : MonoBehaviour
 {
@@ -21,22 +22,45 @@ public class Player_Bonce : MonoBehaviour
     [HideInInspector]
     public bool m_canStopAgain = true;
 
-
+    public Image m_fading;
 
     void Start()
     {
+        if (Manager_GameManager.Instance.m_Avatar == null)
+            Manager_GameManager.Instance.m_Avatar = this.gameObject;
+
+        if (Manager_GameManager.Instance.m_lastCheckpoint == Vector3.zero)
+        {
+            Manager_GameManager.Instance.m_lastCheckpoint = transform.position;
+        }
+        else
+        {
+            transform.position = Manager_GameManager.Instance.m_lastCheckpoint;
+        }
+
+        Manager_GameManager.Instance.m_playerPaused = true;
+
         m_canStopAgain = true;
         m_isMoveable = false;
         m_Rb = GetComponent<Rigidbody>();
         m_previousPos = transform.position;
-        PushedByPlayer();
+
+        StartCoroutine(FadingIn());
+        //PushedByPlayer();
     }
 
-    void Update()
+    IEnumerator FadingIn()
     {
-        Debug.DrawRay(transform.position, m_direction, Color.red, 5);
-       
+        while (m_fading.color.a > 0)
+        {
+            m_fading.color = new Color(m_fading.color.r, m_fading.color.g, m_fading.color.b, m_fading.color.a - 0.03f);
+            yield return new WaitForSeconds(0.02f);
+        }
+        m_fading.color = new Color(m_fading.color.r, m_fading.color.g, m_fading.color.b, 0.0f);
+
+        Manager_GameManager.Instance.m_playerPaused = false;
     }
+
 
     public void PushedByPlayer()
     {
@@ -90,10 +114,6 @@ public class Player_Bonce : MonoBehaviour
                 m_colAvatar = col;
                 PushedByPlateform();
             }
-        }
-        if (col.gameObject.tag == "Bullet")
-        {
-            GetComponent<Player_LifePoint>().LostPoint();
         }
     }
 }

@@ -16,18 +16,21 @@ public class Player_RotationMode : MonoBehaviour {
 
 	void Update ()
     {
-        if (m_PlayerBonce.m_isMoveable == true && Input.GetKeyDown(KeyCode.Mouse0) && m_PlayerBonce.m_canStopAgain == true)
+        if (Manager_GameManager.Instance.m_playerPaused == false)
         {
-            m_canRotate = true;
-            m_PlayerBonce.m_isMoveable = false;
-            StartCoroutine("Rotation");
-            m_PlayerBonce.m_canStopAgain = false;
+            if (m_PlayerBonce.m_isMoveable == true && Input.GetKeyDown(KeyCode.Mouse0) && m_PlayerBonce.m_canStopAgain == true)
+            {
+                m_canRotate = true;
+                m_PlayerBonce.m_isMoveable = false;
+                StartCoroutine("Rotation");
+                m_PlayerBonce.m_canStopAgain = false;
 
-        }
-        else if (m_PlayerBonce.m_isMoveable == false && Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            m_canRotate = false;
-            m_PlayerBonce.PushedByPlayer();
+            }
+            else if (m_PlayerBonce.m_isMoveable == false && Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                m_canRotate = false;
+                m_PlayerBonce.PushedByPlayer();
+            }
         }
 
     }

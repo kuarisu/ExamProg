@@ -23,4 +23,16 @@ public class Player_NbBullet : MonoBehaviour {
         }
     }
 
+    void OnCollisionEnter(Collision col)
+    {
+
+        Debug.Log("hello");
+
+        if (col.gameObject.tag == "RessourceBullet")
+        {
+            AddBullet();
+            Destroy(col.gameObject);
+        }
+    }
+
 }
